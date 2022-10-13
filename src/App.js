@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import DashBoard from './Pages/Dashboard';
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import ListarVeiculo from './Pages/ListarVeiculos';
+import AddVeiculo from './Pages/AddVeiculo';
+import DetalheVeiculo from './Pages/DetalheVeiculo';
+import Navbar from './components/Navbar';
 
-function App() {
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <div>
+        <BrowserRouter>
+        <Navbar/>
+          <Routes>
+            <Route path='/' element={<DashBoard/>}/>
+            <Route path='./Pages/ListarVeiculos' element={<ListarVeiculo/>}/>
+            <Route path='./Pages/AddVeiculo' element={<AddVeiculo/>}/>
+            <Route path='./Pages/DetalheVeiculo' element={<DetalheVeiculo/>}/>
+          </Routes>
+        </BrowserRouter>
+      </div>
+    </React.Fragment>
   );
 }
-
-export default App;
