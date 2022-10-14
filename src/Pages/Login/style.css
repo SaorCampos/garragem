@@ -1,0 +1,10 @@
+.login{
+    width: 90%;
+    margin: auto;
+}
+.login h2{
+    text-align: center;
+}
+.login hr {
+    margin-bottom: 20px;
+}

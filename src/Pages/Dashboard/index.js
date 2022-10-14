@@ -1,4 +1,4 @@
-import{Card, CardContent, CardActionArea} from "@mui/material"
+import{Card, CardContent, } from "@mui/material"
 import React from "react"
 import {DirectionsBike, DirectionsCar, TwoWheeler} from '@mui/icons-material'
 
